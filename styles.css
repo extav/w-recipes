@@ -38,3 +38,13 @@
     flex-direction: column;
     align-items: center;
 }
+
+.input-recipe-count {
+    width: 2rem;
+}
+
+.btn-list-maker {
+    padding: 1rem;
+    background-color: green;
+    color: white;
+}
