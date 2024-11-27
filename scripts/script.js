@@ -6,11 +6,8 @@ const recipeObj = {
     "tinga" : {
         "ingredients" : tinga,
         "count" : 0,
-    }
+    },
 }
-
-
-
 
 
 function clearShoppingList() {
@@ -19,9 +16,8 @@ function clearShoppingList() {
     container.innerHTML = ""
 }
 
-function createListFromRecipeObject(recipeObj) {
 
-    // make the ingredient list 
+function createListFromRecipeObject(recipeObj) {
 
     const ingredientList = {};
     for (let recipe in recipeObj) {
@@ -40,11 +36,11 @@ function createListFromRecipeObject(recipeObj) {
                 }
             }
         }
-
     }
 
     return ingredientList;
 }
+
 
 function addShoppingListToPage(shoppingList) {
     const container = document.querySelector(".shopping-list-area");
@@ -60,10 +56,17 @@ function addShoppingListToPage(shoppingList) {
     container.appendChild(list);
 }
 
+
 function updateRecipeObj() {
-    // for now its just tinga
-    const formValue = document.querySelector("#tinga-count").value
-    recipeObj["tinga"]["count"] = formValue;
+    const cardArr = Array.from(document.querySelectorAll(".recipe-card"))
+    cardArr.map( card => {
+        const input = card.querySelector("input");
+
+        // it will be named <RECIPE>-count
+        const recipeName = input.name.slice(0, -6);
+
+        recipeObj[recipeName]["count"] = input.value;
+    })
 }
 
 
@@ -74,6 +77,7 @@ function modifyShoppingList() {
         createListFromRecipeObject(recipeObj)
     );
 }
+
 
 // get the button working
 const btn = document.querySelector(".btn-list-maker");
