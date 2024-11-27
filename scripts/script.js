@@ -1,10 +1,14 @@
 "use strict";
 
-import { tinga } from "./ingredients.js";
+import { tinga, bean_mix } from "./ingredients.js";
 
 const recipeObj = {
     "tinga" : {
         "ingredients" : tinga,
+        "count" : 0,
+    },
+    "bean-mix" : {
+        "ingredients" : bean_mix,
         "count" : 0,
     },
 }
