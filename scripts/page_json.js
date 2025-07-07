@@ -22,7 +22,10 @@ const recipes = {
 			"<li>(optional) 2 tsp chili powder</li> " +
 			"<li>(optional) 1 tsp smoked paprika</li> " +
 			"</ul> " +
-			"</li> "
+			"</li> ",
+		"instructions" : "<li>Toss it all in the slow cooker and cook on high for 3 hours or low for 6.</li> " +
+            "<li>Shred it up</li> " +
+            "<li>Optional but recommended! Immersion blend the remaining sauce, then return the shreds to the crockpot and cook for 15m on high.</li> ",
 	}
 }
 
